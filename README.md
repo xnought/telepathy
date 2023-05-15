@@ -15,8 +15,8 @@ pip3 install -r requirements.text
 -   [x] test that umap works on dummy example
 -   [x] test that supervised umap works on dummy example
 -   [x] bring in image dataset
--   [ ] compute the clip embeddings for the images
--   [ ] given text, compute scores
--   [ ] supervised umap based on the scores
+-   [x] compute the clip embeddings for the images
+-   [x] given text, compute scores
+-   [x] supervised umap based on the scores
 -   [ ] visualize in the browser with scatter-regl or something
 -   [ ] have better dependency manager
