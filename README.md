@@ -12,9 +12,9 @@ pip3 install -r requirements.text
 
 ## TODO
 
--   [ ] test that umap works on dummy example
--   [ ] test that supervised umap works on dummy example
--   [ ] bring in image dataset
+-   [x] test that umap works on dummy example
+-   [x] test that supervised umap works on dummy example
+-   [x] bring in image dataset
 -   [ ] compute the clip embeddings for the images
 -   [ ] given text, compute scores
 -   [ ] supervised umap based on the scores
