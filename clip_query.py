@@ -72,7 +72,6 @@ class ClipQuery:
         self,
         image_encodings: list[list[float]],
         text: str,
-        normalize=False,
         batch_size=32,
     ):
         # encode the text in CLIP space
@@ -95,8 +94,6 @@ class ClipQuery:
             clip_scores = (
                 images_encoding @ text_encoding.T
             )  # shapes: [n, vector_size] @ [vector_size, 1] = [n, 1]
-            if normalize is True:
-                clip_scores = clip_scores / torch.norm(clip_scores, dim=0, keepdim=True)
             batches.append(clip_scores.squeeze().detach().cpu().tolist())
         return flatten(batches, depth=1)
 
