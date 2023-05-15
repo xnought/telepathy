@@ -263,6 +263,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz#8cfaf2ff603e9aabb910e9c0558c26cf32744061"
   integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
 
+"@flekschas/utils@^0.30.1":
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/@flekschas/utils/-/utils-0.30.1.tgz#dbfe251b165718773c62b6593542ce3323d034b5"
+  integrity sha512-JV/bGmX5hsh3uEKgcV9xe1QymrsXGCaWnD387VBB56sQdpsBexs9d2HmcRbN07DYzF+C89sQ1zP1MeLN2YfOZQ==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
@@ -455,6 +460,13 @@ camelcase-css@^2.0.1:
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
+camera-2d-simple@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/camera-2d-simple/-/camera-2d-simple-3.0.0.tgz#03d5f5251f77eef3786d5b06362951723b38252d"
+  integrity sha512-hBeuUeerQ2Repi/61PGyFkuJ9jt6IKAny7pjQo2w8/8uZh+RKvNLZQy4xbQeDH8FrlnFxAJDjyM4/yuLdOV5vQ==
+  dependencies:
+    gl-matrix "~3.3.0"
+
 caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
   version "1.0.30001487"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001487.tgz#d882d1a34d89c11aea53b8cdc791931bdab5fe1b"
@@ -521,6 +533,14 @@ dlv@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
+
+dom-2d-camera@~2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/dom-2d-camera/-/dom-2d-camera-2.2.5.tgz#2e2841380bc399aa6a41eaf2dcbd22f9eb28c5da"
+  integrity sha512-BmjIiinZsvllot3E7HGsQRS4rfDfmsJK8urFL7po3Sx5r8ZrWvEcHxYxeUqxjEIGqp1Re5qRGTUx3pAACI3mjg==
+  dependencies:
+    camera-2d-simple "^3.0.0"
+    gl-matrix "^3.3.0"
 
 electron-to-chromium@^1.4.284:
   version "1.4.394"
@@ -627,6 +647,16 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+gl-matrix@^3.3.0, gl-matrix@~3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
+  integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==
+
+gl-matrix@~3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.3.0.tgz#232eef60b1c8b30a28cbbe75b2caf6c48fd6358b"
+  integrity sha512-COb7LDz+SXaHtl/h4LeaFcNdJdAQSDeVqjiIihSXNrkWObZLhDI4hIkZC11Aeqp7bcE72clzB0BnDXr2SmslRA==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
@@ -740,6 +770,11 @@ jiti@^1.18.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
 
+kdbush@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-3.0.0.tgz#f8484794d47004cc2d85ed3a79353dbe0abc2bf0"
+  integrity sha512-hRkd6/XW4HTsA9vjVpY9tuXJYLSlelnkTmVFu4M9/7MIYQtFcHpbugAU7UbOfjOiVSVYl2fqgBuJ32JUmRo5Ew==
+
 kleur@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
@@ -754,6 +789,11 @@ lines-and-columns@^1.1.6:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
+
+lodash-es@~4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 magic-string@^0.25.7:
   version "0.25.9"
@@ -969,6 +1009,11 @@ preact@^10.0.0:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.14.0.tgz#7353812c33ae79c1fa91bfd792db030a90565da3"
   integrity sha512-4oh2sf208mKAdL5AQtzXxE387iSGNWMX/YjwMjH6m/XROILKAmx5Pbs2FsXrW7ixoVGGjpfYSBB833vOwYxNxw==
 
+pub-sub-es@^2.0.1, pub-sub-es@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/pub-sub-es/-/pub-sub-es-2.0.1.tgz#86ee2f85a8094157435307569c6f191baadfbd96"
+  integrity sha512-KuL5i+1YdQ/o9xGCz7AsG6hb6PBUFhKNIt3NhZ6Jh/d6F3fVfURyq5fAAwxPcpJS6kkrR4vOYyzZfMpYI8sxlQ==
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
@@ -987,6 +1032,33 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+regl-line@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/regl-line/-/regl-line-1.0.0.tgz#4fe9de66b70ab76ae60572fc570ae93ad819325d"
+  integrity sha512-AkLBm/XbJl1a6EBSd18o33teVjtHFMSGQLY8EnpvcG+OcBRBEc/OHPbmJGJruLXrtTypvuqoCSfG5fPzN7zSVw==
+  dependencies:
+    gl-matrix "^3.3.0"
+    regl "^2.1.0"
+
+regl-scatterplot@^1.6.9:
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/regl-scatterplot/-/regl-scatterplot-1.6.9.tgz#3d3cffd7b5bf098ae4ba88aa97dc1a9b80797154"
+  integrity sha512-3g8R80gzrMkTyaE+2nHEky/Of1iaasf9C54rpVDX8CUTeMefSe/ENgenzxvvnUShtcG1JVUO6Ksojk6eGy0Cqg==
+  dependencies:
+    "@flekschas/utils" "^0.30.1"
+    dom-2d-camera "~2.2.5"
+    gl-matrix "~3.4.3"
+    kdbush "~3.0.0"
+    lodash-es "~4.17.21"
+    pub-sub-es "~2.0.1"
+    regl "~2.1.0"
+    regl-line "~1.0.0"
+
+regl@^2.1.0, regl@~2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/regl/-/regl-2.1.0.tgz#7dae71e9ff20f29c4f42f510c70cd92ebb6b657c"
+  integrity sha512-oWUce/aVoEvW5l2V0LK7O5KJMzUSKeiOwFuJehzpSFd43dO5spP9r+sSUfhKtsky4u6MCqWJaRL+abzExynfTg==
 
 resolve-from@^4.0.0:
   version "4.0.0"
