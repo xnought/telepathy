@@ -6,7 +6,7 @@ Yes I know telekenesis is the actual word for this, but telepathy sounds cooler.
 
 **Install dependencies**
 
-```python
+```bash
 pip3 install -r requirements.text
 ```
 
