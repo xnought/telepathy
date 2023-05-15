@@ -78,6 +78,9 @@ class ClipQuery:
         # encode the text in CLIP space
         tokens = self.tokenizer([text]).to(self.device)
         text_encoding = self.model.encode_text(tokens)
+        # normalize for cosin similarity, thanks @njohnson99
+        text_encoding /= text_encoding.norm(dim=0, keepdim=True)
+
         batches = []
         for batch in tqdm(
             batch_size_iter(image_encodings, batch_size),
@@ -85,6 +88,9 @@ class ClipQuery:
         ):
             # images are already encoded in CLIP space
             images_encoding = torch.tensor(batch, dtype=torch.float32).to(self.device)
+            # normalize for cosin similarity, thanks @njohnson99
+            images_encoding /= images_encoding.norm(dim=1, keepdim=True)
+
             # compute scores for each image
             clip_scores = (
                 images_encoding @ text_encoding.T
