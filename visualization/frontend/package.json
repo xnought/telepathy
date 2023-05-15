@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "openapi": "npx openapi-typescript-codegen --input http://localhost:8000/openapi.json --output ./src/openapi --client fetch"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "@tsconfig/svelte": "^4.0.1",
     "autoprefixer": "^10.4.14",
+    "openapi-typescript-codegen": "^0.24.0",
     "postcss": "^8.4.23",
     "postcss-load-config": "^4.0.1",
     "svelte": "^3.57.0",
