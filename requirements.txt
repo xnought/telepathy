@@ -1,3 +1,4 @@
 umap-learn
 torch
 open_clip_torch
+tqdm
