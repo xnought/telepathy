@@ -19,4 +19,10 @@ pip3 install -r requirements.text
 -   [x] given text, compute scores
 -   [x] supervised umap based on the scores
 -   [ ] visualize in the browser with scatter-regl or something
+    -   [ ] add input to UI
+    -   [ ] query the backend server with telepathy
+    -   [ ] return the path, x, y, and scores to the frontend
+    -   [ ] use scatter-regl to visualize the points
+    -   [ ] overlap the image on hover
 -   [ ] have better dependency manager
+-   [ ] use NOVA to put into notebook
