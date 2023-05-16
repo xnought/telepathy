@@ -59,24 +59,6 @@
 		scatterPtr.destroy();
 	});
 
-	function updateOpacityRange(scatterPtr: ReglScatterObject, length: number) {
-		scatterPtr.set({
-			opacityBy: "category",
-			opacity: new Array(length)
-				.fill(0)
-				.map((_, i) => i / (length - 1)) as unknown as number,
-		});
-	}
-
-	function updateColorRange(domain: (number | string)[]) {
-		if (scatterPtr && domain) {
-			scatterPtr.set({
-				colorBy: "value",
-				pointColor: CONTINUOUS_COLOR_SCALE,
-			});
-		}
-	}
-
 	function init() {
 		scatterPtr = createScatterPlot({
 			canvas: canvasEl,
@@ -95,12 +77,14 @@
 			pointOutlineWidth: pointOutline,
 		});
 
-		// scatterPtr.set({
-		// 	colorBy: "value",
-		// 	pointColor: CONTINUOUS_COLOR_SCALE,
-		// });
-
-		// updateOpacityRange(scatterPtr, 10);
+		scatterPtr.set({
+			colorBy: "category",
+			pointColor: CONTINUOUS_COLOR_SCALE,
+		});
+		scatterPtr.set({
+			colorBy: "value",
+			pointColor: CONTINUOUS_COLOR_SCALE,
+		});
 
 		// listeners
 		listenLasso();
@@ -110,12 +94,15 @@
 	function draw(points: Points2D) {
 		if (scatterPtr) {
 			scatterPtr
-				.draw({
-					x: points.x,
-					y: points.y,
-					category: points?.opacity,
-					value: points?.color,
-				})
+				.draw(
+					{
+						x: points.x,
+						y: points.y,
+						category: points?.score,
+						value: points?.score,
+					},
+					{ transition: true }
+				)
 				.then(() => {
 					// let selIds = $selectionIds.ids as unknown[];
 					// let selectedPoints = [];

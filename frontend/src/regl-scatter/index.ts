@@ -21,7 +21,7 @@ export const WEBGL_EXTENT = [-1, 1];
 export type Points2D = {
 	x: number[];
 	y: number[];
-	color?: number[];
+	score?: number[];
 	opacity?: number[];
 };
 

@@ -1,4 +1,4 @@
-import { schemeCategory10, interpolateBuPu } from "d3";
+import { schemeCategory10, interpolateOranges as interpolateColor } from "d3";
 import { color } from "d3-color";
 
 export const OTHER_COLOR_SCALE = ["#73726E"];
@@ -8,7 +8,7 @@ export const NOMINAL_COLOR_SCALE = schemeCategory10 as string[];
 export const BOOLEAN_COLOR_SCALE = ["#FF5733", "#4168E1"];
 
 export const CONTINUOUS_COLOR_SCALE = interpolateToStringArray(
-	interpolateBuPu,
+	interpolateColor,
 	20,
 	0.1
 );

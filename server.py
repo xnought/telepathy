@@ -18,7 +18,7 @@ def custom_generate_unique_id(route: APIRoute):
 app = FastAPI(
     title="Telepathy Server", generate_unique_id_function=custom_generate_unique_id
 )
-telepathy = TelepathyPandas(image_dir="./data/imagewoof/val", limit=100)
+telepathy = TelepathyPandas(image_dir="./data/imagewoof/val", limit=1000)
 
 
 def mount_static_directory(dir: str):
