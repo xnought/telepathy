@@ -2,7 +2,7 @@
 	import { Input, Label } from "flowbite-svelte";
 	import ScatterPlot from "./ScatterPlot.svelte";
 	import { Telepathy } from "./telepathy";
-	Telepathy.test().then((res) => console.log(res));
+	Telepathy.query({ text: "dogs with hats" }).then((d) => console.log(d));
 
 	let text = "test";
 </script>

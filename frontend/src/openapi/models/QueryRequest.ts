@@ -2,7 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type TestResponse = {
-    test: string;
+export type QueryRequest = {
+    text: string;
 };
 

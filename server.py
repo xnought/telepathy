@@ -18,7 +18,7 @@ def custom_generate_unique_id(route: APIRoute):
 app = FastAPI(
     title="Telepathy Server", generate_unique_id_function=custom_generate_unique_id
 )
-telepathy = TelepathyPandas(image_dir="../../data/imagewoof/val", limit=100)
+telepathy = TelepathyPandas(image_dir="./data/imagewoof/val", limit=100)
 
 
 # https://github.com/zeno-ml/zeno
@@ -60,10 +60,10 @@ def query(req: QueryRequest):
     assert telepathy
     output = telepathy(req.text)
     return QueryResponse(
-        x=output["x"],
-        y=output["y"],
-        score=output["score"],
-        image_path=output["image_path"],
+        x=output["x"].tolist(),
+        y=output["y"].tolist(),
+        score=output["score"].tolist(),
+        image_path=output["image_path"].tolist(),
     )
 
 
