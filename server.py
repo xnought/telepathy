@@ -7,6 +7,7 @@ from fastapi.staticfiles import StaticFiles
 import uvicorn
 import os
 import pandas as pd
+from telepathy import TelepathyPandas
 
 
 # https://github.com/zeno-ml/zeno/blob/main/zeno/server.py#L52
@@ -17,6 +18,7 @@ def custom_generate_unique_id(route: APIRoute):
 app = FastAPI(
     title="Telepathy Server", generate_unique_id_function=custom_generate_unique_id
 )
+telepathy = TelepathyPandas(image_dir="../../data/imagewoof/val", limit=100)
 
 
 # https://github.com/zeno-ml/zeno
@@ -42,13 +44,27 @@ def disable_cors(app: FastAPI):
     )
 
 
-class TestResponse(CamelModel):
-    test: str
+class QueryRequest(CamelModel):
+    text: str
 
 
-@app.get("/test", response_model=TestResponse)
-def test():
-    return TestResponse(test="test")
+class QueryResponse(CamelModel):
+    x: list[float]
+    y: list[float]
+    score: list[float]
+    image_path: list[str]
+
+
+@app.post("/query", response_model=QueryResponse)
+def query(req: QueryRequest):
+    assert telepathy
+    output = telepathy(req.text)
+    return QueryResponse(
+        x=output["x"],
+        y=output["y"],
+        score=output["score"],
+        image_path=output["image_path"],
+    )
 
 
 def main(host="localhost", port=8000):

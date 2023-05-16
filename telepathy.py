@@ -63,8 +63,10 @@ class TelepathyPandas:
                 image_dir, f"telepathy_cache_limit_{limit}.parquet"
             )
             if os.path.exists(self.cache_filename):
+                print("loading from cache")
                 self.df = pd.read_parquet(self.cache_filename)
             else:
+                print("computing from scratch")
                 self.df = pd.DataFrame(columns=["image_path", "encoding"])
                 encodings, image_paths = self._encode_images(image_dir, limit)
                 self.df["image_path"] = image_paths
