@@ -21,6 +21,13 @@ app = FastAPI(
 telepathy = TelepathyPandas(image_dir="./data/imagewoof/val", limit=100)
 
 
+def mount_static_directory(dir: str):
+    app.mount(dir.lstrip("."), StaticFiles(directory=dir), name="static")
+
+
+mount_static_directory("./data/imagewoof/val")
+
+
 # https://github.com/zeno-ml/zeno
 def to_camel(string):
     components = string.split("_")
